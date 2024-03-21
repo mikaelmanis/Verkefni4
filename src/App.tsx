@@ -8,6 +8,7 @@ import { Teams } from "./pages/Teams";
 import { Nothing } from "./pages/Nothing";
 import { Boltadeildin } from "./pages/Boltaland";
 
+
 function App() {
   return (
     <div>
