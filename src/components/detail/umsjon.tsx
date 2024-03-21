@@ -9,7 +9,7 @@ export function Umsjon() {
             setTeams(teams);
         }
         fetchData();
-    }, [teams]);
+    }, []);
 
     function CreateGame({home, away, home_score, away_score, date }: any) {
         const body = JSON.stringify({

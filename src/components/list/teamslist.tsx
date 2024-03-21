@@ -9,7 +9,7 @@ export function TeamsList() {
           setTeams(teams);
         }
         fetchData()
-    }, [teams]);
+    }, []);
     return (
         <div>
             <div className='teams'>

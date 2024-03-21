@@ -25,7 +25,7 @@ export function GamesList() {
                 setGames(games);
             }
             fetchData()
-    }, [games]);
+    }, []);
     const gamesByDate = games.reduce((acc: any, game: Game) => {
         const date = game.date.split('T')[0];
         if (!acc[date]) {
