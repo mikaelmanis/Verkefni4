@@ -8,6 +8,7 @@ import { Teams } from "./pages/teams/Teams";
 import { Nothing } from "./pages/Nothing";
 import { Boltadeildin } from "./pages/boltaland/Boltaland";
 import { SoloGame } from "./components/detail/sologame";
+import { Umsjon } from "./components/detail/umsjon";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="teams" element={<Teams />} />
           <Route path="games" element={<Games />} />
           <Route path='sologame' element={<SoloGame/>} />
+          <Route path='umsjon' element={<Umsjon/>} />
           <Route path="*" element={<Nothing />} />
         </Route>
       </Routes>

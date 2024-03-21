@@ -1,44 +1,30 @@
 import { useLocation } from 'react-router-dom';
+import './sologame.css';
 
 export function SoloGame() {
     const location = useLocation();
     const game = location.state;
-
-    const updateScore = async () => {
-        // Make API call to update the score
-        try {
-            const response = await fetch('https://api.example.com/update-score', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    gameId: game.id,
-                    newScore: 10 // Replace with the new score value
-                })
-            });
-
-            if (response.ok) {
-                // Score updated successfully
-                console.log('Score updated successfully');
-            } else {
-                // Handle error response
-                console.log('Failed to update score');
-            }
-        } catch (error) {
-            // Handle network error
-            console.log('Network error occurred');
-        }
-    };
-
+    console.log(game.id)
+   
+    function DeleteGame() {
+        fetch('http://localhost:5000/games/' + game.id, {
+            method: 'DELETE',
+        });
+    }
     return (
-        <div className='content'>
-            <h2>Stjórnleikur</h2>
-            <p>Hérna getur þú skoðað og breytt leik.</p>
-            
-            <div className='home'>{game.home.name}</div> <div className="score">{game.home.score} - {game.away.score}</div> <div className="away">{game.away.name}</div>
-
-            <button onClick={updateScore}>Update Score</button>
+        <div className='deletion'>
+            <h1>Leikur</h1>
+            <div>
+                <h2>{new Date(game.date).toDateString()}</h2>
+                <div className='gameForm'>
+                    <div className='home'>{game.home.name}</div> <div className="score">{game.home.score} - {game.away.score}</div> <div className="away">{game.away.name}</div>
+                </div>
+                <button onClick={() => {
+                    if (window.confirm('Are you sure you want to delete this game?')) {
+                        DeleteGame();
+                    }
+                }}>Eyða leik</button>
+            </div>
         </div>
     );
 }

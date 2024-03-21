@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import './teamslist.css';
 export function TeamsList() {
     const [teams, setTeams] = useState<Array<any>>([])
     useEffect(() => {
@@ -12,10 +12,10 @@ export function TeamsList() {
     }, [teams]);
     return (
         <div>
-            <div className='team'>
+            <div className='teams'>
                 <ul>
                     {teams.map((team: any) => 
-                    <li>{team.name}</li>)}
+                    <li className='team'>{team.name}</li>)}
                 </ul>
             </div>
         </div>
