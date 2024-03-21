@@ -3,10 +3,11 @@ import React from 'react';
 
 import './App.css';
 import { Layout } from "./components/layout/layout";
-import { Games } from "./pages/Games";
-import { Teams } from "./pages/Teams";
+import { Games } from "./pages/games/Games";
+import { Teams } from "./pages/teams/Teams";
 import { Nothing } from "./pages/Nothing";
-import { Boltadeildin } from "./pages/Boltaland";
+import { Boltadeildin } from "./pages/boltaland/Boltaland";
+import { SoloGame } from "./components/detail/sologame";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Boltadeildin />} />
           <Route path="teams" element={<Teams />} />
           <Route path="games" element={<Games />} />
+          <Route path='sologame' element={<SoloGame/>} />
           <Route path="*" element={<Nothing />} />
         </Route>
       </Routes>

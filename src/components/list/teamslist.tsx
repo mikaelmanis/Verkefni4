@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import './pages.css';
 
-export function Teams() {
+export function TeamsList() {
     const [teams, setTeams] = useState<Array<any>>([])
     useEffect(() => {
         async function fetchData() {
@@ -12,11 +11,13 @@ export function Teams() {
         fetchData()
     }, [teams]);
     return (
-        <div className='content'>
-            <h2>Liðin</h2>
-            <ul>
-                {teams.map((team: any) => <li>{team.name}</li>)}
-            </ul>
+        <div>
+            <div className='team'>
+                <ul>
+                    {teams.map((team: any) => 
+                    <li>{team.name}</li>)}
+                </ul>
+            </div>
         </div>
     );
-  }
+    }

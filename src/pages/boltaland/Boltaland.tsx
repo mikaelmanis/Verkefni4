@@ -1,4 +1,4 @@
-import './pages.css';
+import './boltaland.css';
 
 export function Boltadeildin() {
     return (

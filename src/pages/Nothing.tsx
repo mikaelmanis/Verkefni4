@@ -1,5 +1,5 @@
 import corki from './corki.jpg';
-import './pages.css';
+import './nothing.css';
 
 export function Nothing() {
     return (
