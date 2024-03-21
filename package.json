@@ -1,7 +1,6 @@
 {
   "name": "verkefni4",
   "version": "0.1.0",
-  "type":"module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -43,7 +42,6 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "typescript": "^5.4.3",
     "typescript-eslint": "^7.3.1"
   }
 }
