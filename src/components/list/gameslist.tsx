@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './gameslist.css';
 export type Game = {
-    id: number;
+    id?: number;
     date: string;
     home: {
         name: string;

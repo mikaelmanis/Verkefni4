@@ -23,6 +23,8 @@ export function SoloGame() {
                     if (window.confirm('Are you sure you want to delete this game?')) {
                         DeleteGame();
                     }
+                    window.alert('The game has been deleted.');
+                    window.location.href = '/games';
                 }}>Eyða leik</button>
             </div>
         </div>

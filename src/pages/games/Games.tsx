@@ -7,7 +7,7 @@ export function Games() {
     return (
       <div className='content'>
         <h1>Leikir</h1>
-        <a href='/umsjon'>Umsjónarsíða</a>
+        <a href='/umsjon'>Umsjónarsíða (Búa til nýjan leik)</a>
         <GamesList />
       </div>
     );
